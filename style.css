@@ -1,0 +1,73 @@
+body{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; */
+    background-color: #22223b;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+    margin-left: 400px;
+}
+ .button{
+    border-radius: 16px;
+    background-color: #161620 ;
+    color: crimson;
+    font-size: 30px;
+    padding: 40px 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} 
+.container{
+    margin-top: 70px;
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px; 
+}
+
+.container::before{
+   content: '';
+   position: absolute;
+   width: 500px;
+   height: 500px;
+   background-image: conic-gradient( transparent, transparent, transparent, #80ffdb);
+   animation: rotate 2s linear infinite;
+}
+
+.container::after{
+   content: '';
+   position: absolute;
+   width: 500px;
+   height: 500px;
+   background-image: conic-gradient( transparent, transparent, transparent, #6930c3);
+   animation: rotate 2s linear infinite;
+   animation-delay: -1s;
+}
+
+.container span{
+    position: absolute;
+    inset: 10px;
+    z-index: 2;
+    border-radius: 16px;
+    background-color: #161620;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+h1{
+    
+    color: beige;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
